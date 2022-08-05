@@ -68,18 +68,18 @@ void loop() {
   }
 
   digitalWrite(InMotorA2, HIGH);
-  digitalWrite(InMotorB2, HIGH);
+  
 
   if (Vertical == 1){
-    analogWrite(pwmMotorA,128);
-    analogWrite(pwmMotorB,128);
+    analogWrite(pwmMotorA,128);   
   }
   else if (Vertical == -1){
-    digitalWrite(InMotorA1, HIGH); 
-    digitalWrite(InMotorA2, LOW);
+    analogWrite(pwmMotorA,0);   
   }
+  else if (Vertical == 0){
+    analogWrite(pwmMotorA,0);
   //Ustawienie prędkości obrotowej na 50% (zakres PWM: 8bitów czyli 0-255)
-  
+  }
 
 
 
