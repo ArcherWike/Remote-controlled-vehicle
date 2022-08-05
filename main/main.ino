@@ -45,6 +45,42 @@ void setup() {
 }
 
 void loop() {
+  if (BTserial.available()){
+    value = BTserial.read();
+    Serial.write(value);
+    
+    if (value == 'R'){
+       Horizontal = 1;
+    }
+    else if(value == 'L'){
+       Horizontal = -1;
+    }
+   else if (value == 'U'){
+       Vertical = 1;
+    }
+    else if(value == 'D'){
+       Vertical = -1;
+    }
+    else if(value == '0'){
+      Horizontal = 0;
+      Vertical = 0;
+    }
+  }
+
+  digitalWrite(InMotorA2, HIGH);
+  digitalWrite(InMotorB2, HIGH);
+
+  if (Vertical == 1){
+    analogWrite(pwmMotorA,128);
+    analogWrite(pwmMotorB,128);
+  }
+  else if (Vertical == -1){
+    digitalWrite(InMotorA1, HIGH); 
+    digitalWrite(InMotorA2, LOW);
+  }
+  //Ustawienie prędkości obrotowej na 50% (zakres PWM: 8bitów czyli 0-255)
   
+
+
 
 }
