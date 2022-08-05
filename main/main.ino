@@ -67,14 +67,19 @@ void loop() {
     }
   }
 
-  digitalWrite(InMotorA2, HIGH);
+  
   
 
   if (Vertical == 1){
+    digitalWrite(InMotorA1, LOW);
+    digitalWrite(InMotorA2, HIGH);
     analogWrite(pwmMotorA,128);   
   }
   else if (Vertical == -1){
-    analogWrite(pwmMotorA,0);   
+    digitalWrite(InMotorA1, HIGH);
+    digitalWrite(InMotorA2, LOW); 
+    analogWrite(pwmMotorA,128);
+       
   }
   else if (Vertical == 0){
     analogWrite(pwmMotorA,0);
