@@ -1,9 +1,9 @@
 //Motor connection
 
       //A
-int pwmMotorA=9;
-int InMotorA1=12;
-int InMotorA2=13;
+int pwmMotorA=5;
+int InMotorA1=4;
+int InMotorA2=3;
       //B
 int pwmMotorB=6;
 int InMotorB1=8;
@@ -74,31 +74,31 @@ void loop() {
   
 
   if (Vertical == 1){
-    digitalWrite(InMotorA1, LOW);
-    digitalWrite(InMotorA2, HIGH);
-    analogWrite(pwmMotorA,128); 
-
-    digitalWrite(InMotorB1, LOW);
-    digitalWrite(InMotorB2, HIGH);
-    analogWrite(pwmMotorB,128);
-
-  }
-  else if (Vertical == -1){
     digitalWrite(InMotorA1, HIGH);
     digitalWrite(InMotorA2, LOW); 
     analogWrite(pwmMotorA,128);
 
     digitalWrite(InMotorB1, HIGH);
     digitalWrite(InMotorB2, LOW); 
+    analogWrite(pwmMotorB,128);
+
+  }
+  else if (Vertical == -1){
+    digitalWrite(InMotorA1, LOW);
+    digitalWrite(InMotorA2, HIGH);
+    analogWrite(pwmMotorA,128); 
+
+    digitalWrite(InMotorB1, LOW);
+    digitalWrite(InMotorB2, HIGH);
     analogWrite(pwmMotorB,128);      
   }
   else if (Horizontal == -1){
-    analogWrite(pwmMotorA,64);
+    analogWrite(pwmMotorA,32);
     analogWrite(pwmMotorB,128);    
   }
   else if (Horizontal == 1){
     analogWrite(pwmMotorA,128);
-    analogWrite(pwmMotorB,64);
+    analogWrite(pwmMotorB,32);
   }
   else if (Vertical == 0){
     analogWrite(pwmMotorA,0);
