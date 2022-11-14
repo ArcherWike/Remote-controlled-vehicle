@@ -1,6 +1,12 @@
 # Remote-controlled vehicle
 Program connect the bluetooth module to the arduino board and controlling the wheels from the signal
 
+
+
+<div>
+  <img align="center" src="https://github.com/ArcherWike/contents/blob/main/ArduinoCar.gif?raw=true" width="800"/>
+</div>
+
 <div>
   <img src="https://raw.githubusercontent.com/ArcherWike/contents/main/1668069736297.jpg?token=GHSAT0AAAAAABWF3LWYQUIUK4T5VPFVRGMOY3NGNMA" width="200"/>
   <img src="https://raw.githubusercontent.com/ArcherWike/contents/main/1668069736305.jpg?token=GHSAT0AAAAAABWF3LWYSH5PLE4ZWADGAK5CY3NGNOA" width="200"/>
